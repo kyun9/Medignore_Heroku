@@ -5,5 +5,5 @@ from django.db import models
 
 class Photo(models.Model):
     title = models.CharField(max_length=255, blank=True)
-    file = models.FileField(upload_to='medignore/')
+    photo_file = models.ImageField(upload_to='medignore/', blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
