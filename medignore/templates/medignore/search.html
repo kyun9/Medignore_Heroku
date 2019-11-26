@@ -26,9 +26,7 @@
   <h3>Drop Photos Here to Upload</h3>
 </div>
 
-
-
-<input id="fileupload" type="file" name="file" multiple style="display: none;" data-url="{% url 'medignore:search' %}"
+<input id="fileupload" type="file" name="photo_file" multiple style="display: none;" data-url="{% url 'medignore:search' %}"
   data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 
 <table id="gallery" class="table table-bordered">
@@ -40,14 +38,14 @@
   <tbody>
     {% for photo in photos %}
     <tr>
-      <td><a href="{{ photo.file.url }}">{{ photo.file.name }}</a></td>
+      <td><a href="{{ photo.photo_file.url }}">{{ photo.photo_file.name }}</a></td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
 <div id="photo">
   {% for photo in photos %}
-  <img src="{{ photo.file.url }}">
+  <img src="{{ photo.photo_file.url }}">
   {% endfor %}
 </div>
 {% endblock %}
