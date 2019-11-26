@@ -20,7 +20,7 @@ $(function () {
           $("#searchText").before("<span class='dur'><span class='close'><i ref='xicon' class='fas fa-times'></i></span><span class='text'>" + data.result.getDurNames[i] + "</span></span>");
         }
 
-        alert()
+        
         
         $('.merong strong').text(data.result.getDurNames)
 
